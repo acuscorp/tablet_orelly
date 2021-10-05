@@ -1,21 +1,41 @@
 @FunctionalInterface
-interface Square
-{
-    int calculate(int x);
+interface Square<T>{
+    T calculate(T x);
+}
+
+//@FunctionalInterface
+//interface Map<K,V,U> {
+ // map()
+//}
+
+class Pair<K,V>{
+ private final K key;
+ private final V value;
+ 
+ public Pair(K key, V value){
+   this.key = key;
+   this.value = value;
+ }
+ 
+ public K getKey(){
+   return key;
+ }
+ public V getValue(){
+   return value;
+ }
 }
  
-class Client
-{
-    public static void main(String args[])
-    {
-        int a = 5;
- 
-        // lambda expression to define the calculate method
-        Square s = (int x)->x*x;
- 
-        // parameter passed and return type must be
-        // same as defined in the prototype
-        int ans = s.calculate(a);
+class Client{
+    public static void main(String args[]){
+        Integer a = 5;
+        Square<Integer> square = (x)->x*x;
+        int ans = square.calculate(a);
         System.out.println(ans);
+        
+        Square<Double> dSquare = (v)-> v*v;
+        
+        double dRes = dSquare.calculate(3.6);
+        
+        System.out.println(dRes);
     }
 }
