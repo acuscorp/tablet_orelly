@@ -1,18 +1,27 @@
+import java.math.BigDecimal;
+
 public class FloatAndDoubleProblems{
   public static void working(){
-    System.out.println(1.03 - 0.42);
-    System.out.println(103 - 042);
-    System.out.println(1.00 - 9 * 0.10);
-    
-    double funds = 1.00;
+    final BigDecimal TEN_CENTS = new BigDecimal(".10");
+
     int itemsBought = 0;
 
-    for (double price = 0.10; funds >= price; price += 0.10) {
-        funds -= price;
+    BigDecimal funds = new BigDecimal("1.00");
+    
+    for (BigDecimal price = TEN_CENTS;
+
+            funds.compareTo(price) >= 0;
+
+            price = price.add(TEN_CENTS)) {
+
+        funds = funds.subtract(price);
+
         itemsBought++;
     }
+    
     System.out.println(itemsBought + " items bought.");
 
-    System.out.println("Change: $" + funds);
+    System.out.println("Money left over: $" + funds);
+
   }
 } 
