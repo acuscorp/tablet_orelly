@@ -1,5 +1,7 @@
 import java.math.BigDecimal;
-
+//  In summary, don’t use float or 
+//  double for any calculations that 
+//  require an exact answer.
 public class FloatAndDoubleProblems{
   public static void working(){
     int itemsBought = 0;
