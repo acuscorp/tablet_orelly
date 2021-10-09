@@ -2,26 +2,21 @@ import java.math.BigDecimal;
 
 public class FloatAndDoubleProblems{
   public static void working(){
-    final BigDecimal TEN_CENTS = new BigDecimal(".10");
-
     int itemsBought = 0;
 
-    BigDecimal funds = new BigDecimal("1.00");
-    
-    for (BigDecimal price = TEN_CENTS;
+    int funds = 100;
 
-            funds.compareTo(price) >= 0;
+    for (int price = 10; funds >= price; price += 10) {
 
-            price = price.add(TEN_CENTS)) {
-
-        funds = funds.subtract(price);
+        funds -= price;
 
         itemsBought++;
+
     }
-    
+
     System.out.println(itemsBought + " items bought.");
 
-    System.out.println("Money left over: $" + funds);
+    System.out.println("Cash left over: " + funds + " cents");
 
   }
 } 
