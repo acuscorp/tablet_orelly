@@ -1,5 +1,5 @@
 import java.math.BigDecimal;
-//  In summary, don’t use float or 
+//  In summary, dont use float or 
 //  double for any calculations that 
 //  require an exact answer.
 public class FloatAndDoubleProblems{
