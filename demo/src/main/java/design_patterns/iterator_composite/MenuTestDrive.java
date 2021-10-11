@@ -1,4 +1,4 @@
-package src.main.java.design_patterns;
+package src.main.java.design_patterns.iterator_composite;
 
 // proot javac src/main/java/design_patterns/MenuTestDrive.java && proot java src/main/java/design_patterns/MenuTestDrive
 public class MenuTestDrive {

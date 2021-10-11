@@ -1,4 +1,4 @@
-package src.main.java.design_patterns;
+package src.main.java.design_patterns.iterator_composite;
 public abstract class MenuComponent {
     
     public void add(MenuComponent menuComponent){
