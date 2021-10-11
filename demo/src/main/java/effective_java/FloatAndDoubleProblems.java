@@ -1,3 +1,4 @@
+package src.main.java.effective_java;
 public class FloatAndDoubleProblems{
   public static void working(){
     System.out.println(1.03 - 0.42);
