@@ -1,3 +1,4 @@
+package src.main.java.effective_java;
 
 import java.util.ArrayList;
 import java.util.Collection;
